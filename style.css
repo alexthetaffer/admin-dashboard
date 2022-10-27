@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --secondary-color: rgb(79, 124, 207);
+    --primary-color: rgb(53, 53, 53);
+    --light-color: rgb(230, 232, 235);
+    font-family: roboto, sans-serif;
+}
 
 * {
     margin: 0;
@@ -5,7 +13,184 @@
     box-sizing: border-box;
 }
 
-header .profile-picture {
+body {
+    display: grid;
+    grid-template-columns: 268px 1fr 268px;
+    grid-template-rows: 80px 98px  1fr;
+    min-height: 100vh;
+}
+
+header {
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header input {
+    border: none;
+    background-color: var(--light-color);
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+header .left {
+    max-width: 600px;
+}
+
+header .right {
+    justify-self: end;
+}
+
+header .left, header .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0 40px;
+}
+
+.upper-nav {
+    grid-column: 2 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+nav .left, nav .right {
+    display: flex;
+    margin: 0 40px;
+
+}
+
+nav button {
+    height: 40px;
+    width: 88px;
+    border-radius: 12px;
+    margin: 0 14px;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sidebar {
+    grid-row: 1 / -1;
+    background-color: var(--secondary-color);
+    color: white;
+    background-color: var(--primary-color);
+    padding-left: 18px;
+
+}
+
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 9px;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 14px 0px;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.sidebar li img {
+    width: 26px;
+    filter: invert();
+}
+
+main, .side-articles {
+    padding: 32px 24px;
+}
+
+main, .side-articles {
+    background-color: var(--light-color);
+}
+
+.card-holder {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 22px;
+    border-left: 7px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 2px 4px 5px #bbb;
+    background-color: white;
+    min-height: 200px;
+}
+
+.side-articles .card {
+    border: none;
+    margin-bottom: 38px;
+}
+
+.side-articles .card p {
+    font-size: 12px;
+}
+
+.card h1 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.card h3 {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #444;
+}
+
+.action-icons {
+    display: flex;
+    justify-content: end;
+    gap: 18px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    width: 44px;
+    filter: invert();
+}
+
+header .profile-picture, .trending-profile .profile-picture {
     width: 50px;
 }
 
@@ -15,4 +200,32 @@ nav .profile-picture {
 
 .icon-small {
     width: 24px;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.line {
+    height: 1px;
+    background-color: #ddd;
+    margin: 12px 0;
+}
+
+.profile-name p {
+    font-weight: bold;
+}
+
+.trending-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: ;
+}
+
+.trending-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
